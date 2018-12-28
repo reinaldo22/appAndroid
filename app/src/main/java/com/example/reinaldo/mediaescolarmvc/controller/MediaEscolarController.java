@@ -9,8 +9,8 @@ import com.example.reinaldo.mediaescolarmvc.model.MediaEscolar;
 
 public class MediaEscolarController extends DataSource {
 
+    ContentValues dados = new ContentValues();
 
-    ContentValues dados;
 
     public MediaEscolarController(Context context) {
         super(context);
@@ -24,11 +24,12 @@ public class MediaEscolarController extends DataSource {
 
     }
 
-    public boolean salvar(MediaEscolar obj){
+    public void salvar(MediaEscolar obj) {
 
-        boolean sucesso = true;
 
-        dados = new ContentValues();
+
+
+        ContentValues dados = new ContentValues();
 
         dados.put(MediaEscolarDataModel.getMateria(), obj.getMateria());
         dados.put(MediaEscolarDataModel.getBimestre(), obj.getBimestre());
@@ -37,9 +38,9 @@ public class MediaEscolarController extends DataSource {
         dados.put(MediaEscolarDataModel.getNotaMateria(), obj.getNotaMateria());
         dados.put(MediaEscolarDataModel.getMediaFinal(), obj.getMediaFinal());
 
-        sucesso = insert(MediaEscolarDataModel.getTABELA(), dados);
+        insert(MediaEscolarDataModel.getTABELA(), dados);
 
-        return sucesso;
+
     }
-}
 
+}

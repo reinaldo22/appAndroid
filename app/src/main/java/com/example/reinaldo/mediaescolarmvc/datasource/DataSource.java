@@ -51,13 +51,13 @@ public class DataSource extends SQLiteOpenHelper {
 
         boolean sucesso = true;
 
-        try {
+       try {
 
             sucesso = db.insert(tabela, null, dados) > 0;
 
         }catch (Exception e){
 
-            sucesso = false;
+           sucesso = false;
 
         }
 

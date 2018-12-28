@@ -32,9 +32,9 @@ public class SplashActivity extends AppCompatActivity {
 
                 MediaEscolar obj = new MediaEscolar();
 
-                obj.setMateria("MatemÃ¡tica");
-                obj.setBimestre("1Âº Bimestre");
-                obj.setSituacao("Aprovado");
+
+                obj.setMateria("Geografia");
+                obj.setBimestre("1º Bimestre");
                 obj.setNotaProva(10);
                 obj.setNotaMateria(10);
                 obj.setMediaFinal(10);

@@ -27,7 +27,7 @@ public class MediaEscolarDataModel {
 
 
 
-        /*queryCriarTabela = " CREATE TABLE "+TABELA+" ( "
+        queryCriarTabela = " CREATE TABLE "+TABELA+" ( "
                     +id +" INTEGER PRIMARY KEY, "
                     +materia +" TEXT, "
                     +bimestre +" TEXT, "
@@ -35,12 +35,12 @@ public class MediaEscolarDataModel {
                     +notaProva +" REAL, "
                     +notaMateria +" REAL, "
                     +mediaFinal +" REAL "
-                    +" ) ";*/
+                    +" ) ";
 
 
 
-            queryCriarTabela = "CREATE TABLE "+TABELA;
-            queryCriarTabela += "(";
+            /*queryCriarTabela = " CREATE TABLE "+TABELA;
+            queryCriarTabela += " ( ";
             queryCriarTabela += id + " INTEGER PRIMARY KEY AUTOINCREMENT, ";
             queryCriarTabela += materia + " TEXT, ";
             queryCriarTabela += bimestre + " TEXT, ";
@@ -48,7 +48,7 @@ public class MediaEscolarDataModel {
             queryCriarTabela += notaProva + " REAL, ";
             queryCriarTabela += notaMateria + " REAL, ";
             queryCriarTabela += mediaFinal + " REAL ";
-            queryCriarTabela += ")";
+            queryCriarTabela += " ) ";*/
 
             return  queryCriarTabela;
         }
