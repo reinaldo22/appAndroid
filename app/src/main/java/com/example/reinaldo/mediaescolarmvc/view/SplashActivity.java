@@ -40,10 +40,13 @@ public class SplashActivity extends AppCompatActivity {
                 obj.setMediaFinal(10);
                 obj.setSituacao("Aprovado");
 
-                MediaEscolarController mediaEscolarController =
-                        new MediaEscolarController(getBaseContext());
+                MediaEscolarController mediaEscolarController = new MediaEscolarController(getBaseContext());
 
-                mediaEscolarController.salvar(obj);
+                obj.setId(2);
+                mediaEscolarController.deletar(obj);
+
+                obj.setId(5);
+                mediaEscolarController.deletar(obj);
 
                 Intent telaPrincipal
                         = new Intent(SplashActivity.this,

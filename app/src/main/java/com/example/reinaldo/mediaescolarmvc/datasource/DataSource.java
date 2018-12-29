@@ -64,4 +64,14 @@ public class DataSource extends SQLiteOpenHelper {
         return sucesso;
     }
 
+    public boolean deletar(String tabela, int id){
+
+        boolean sucesso = true;
+
+        sucesso = db.delete(tabela,"id=?",new String[]{Integer.toString(id)}) > 0;
+
+
+        return true;
+    }
+
 }

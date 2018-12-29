@@ -42,5 +42,13 @@ public class MediaEscolarController extends DataSource {
 
 
     }
+    public  boolean deletar (MediaEscolar obj){
+
+        boolean sucesso = true;
+
+        sucesso = deletar(MediaEscolarDataModel.getTABELA(), obj.getId());
+
+        return true;
+    }
 
 }
