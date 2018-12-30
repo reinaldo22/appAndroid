@@ -74,4 +74,15 @@ public class DataSource extends SQLiteOpenHelper {
         return true;
     }
 
+    public boolean alterar (String tabela, ContentValues dados){
+
+        boolean sucesso = true;
+
+        int id = dados.getAsInteger("id");
+
+        sucesso = db.update(tabela,dados,"id=?", new String[]{Integer.toString(id)}) > 0;
+
+        return sucesso;
+    }
+
 }

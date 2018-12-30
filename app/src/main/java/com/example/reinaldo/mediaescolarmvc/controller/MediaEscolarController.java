@@ -51,4 +51,23 @@ public class MediaEscolarController extends DataSource {
         return true;
     }
 
+    public boolean alterar(MediaEscolar obj){
+
+        boolean sucesso = true;
+
+        ContentValues dados = new ContentValues();
+
+        dados.put(MediaEscolarDataModel.getId(), obj.getId());
+        dados.put(MediaEscolarDataModel.getMateria(), obj.getMateria());
+        dados.put(MediaEscolarDataModel.getBimestre(), obj.getBimestre());
+        dados.put(MediaEscolarDataModel.getSituacao(), obj.getSituacao());
+        dados.put(MediaEscolarDataModel.getNotaProva(), obj.getNotaProva());
+        dados.put(MediaEscolarDataModel.getNotaMateria(), obj.getNotaMateria());
+        dados.put(MediaEscolarDataModel.getMediaFinal(), obj.getMediaFinal());
+
+        sucesso = alterar(MediaEscolarDataModel.getTABELA(), dados);
+
+        return sucesso;
+    }
+
 }

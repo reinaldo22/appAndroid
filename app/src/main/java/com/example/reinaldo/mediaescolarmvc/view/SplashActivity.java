@@ -33,20 +33,18 @@ public class SplashActivity extends AppCompatActivity {
                 MediaEscolar obj = new MediaEscolar();
 
 
-                obj.setMateria("Geografia");
-                obj.setBimestre("1º Bimestre");
-                obj.setNotaProva(10);
-                obj.setNotaMateria(10);
-                obj.setMediaFinal(10);
-                obj.setSituacao("Aprovado");
+                obj.setMateria("Matematica");
+                obj.setBimestre("2º Bimestre");
+                obj.setNotaProva(2);
+                obj.setNotaMateria(2);
+                obj.setMediaFinal(2);
+                obj.setSituacao("Reprovado");
 
                 MediaEscolarController mediaEscolarController = new MediaEscolarController(getBaseContext());
 
-                obj.setId(2);
-                mediaEscolarController.deletar(obj);
+                obj.setId(4);
+                mediaEscolarController.alterar(obj);
 
-                obj.setId(5);
-                mediaEscolarController.deletar(obj);
 
                 Intent telaPrincipal
                         = new Intent(SplashActivity.this,
