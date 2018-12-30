@@ -9,6 +9,8 @@ import com.example.reinaldo.mediaescolarmvc.R;
 import com.example.reinaldo.mediaescolarmvc.controller.MediaEscolarController;
 import com.example.reinaldo.mediaescolarmvc.model.MediaEscolar;
 
+import java.util.List;
+
 public class SplashActivity extends AppCompatActivity {
 
     //Tempo de apresentação da tela Splash
@@ -30,21 +32,13 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                MediaEscolar obj = new MediaEscolar();
-
-
-                obj.setMateria("Matematica");
-                obj.setBimestre("2º Bimestre");
-                obj.setNotaProva(2);
-                obj.setNotaMateria(2);
-                obj.setMediaFinal(2);
-                obj.setSituacao("Reprovado");
-
                 MediaEscolarController mediaEscolarController = new MediaEscolarController(getBaseContext());
 
-                obj.setId(4);
-                mediaEscolarController.alterar(obj);
+                List<MediaEscolar> objetos = mediaEscolarController.listar();
 
+                for (MediaEscolar obj: objetos) {
+
+                }
 
                 Intent telaPrincipal
                         = new Intent(SplashActivity.this,

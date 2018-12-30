@@ -7,6 +7,8 @@ import com.example.reinaldo.mediaescolarmvc.datamodel.MediaEscolarDataModel;
 import com.example.reinaldo.mediaescolarmvc.datasource.DataSource;
 import com.example.reinaldo.mediaescolarmvc.model.MediaEscolar;
 
+import java.util.List;
+
 public class MediaEscolarController extends DataSource {
 
     ContentValues dados = new ContentValues();
@@ -68,6 +70,11 @@ public class MediaEscolarController extends DataSource {
         sucesso = alterar(MediaEscolarDataModel.getTABELA(), dados);
 
         return sucesso;
+    }
+    public List<MediaEscolar>listar(){
+
+
+        return getAllMediaEscolar();
     }
 
 }
